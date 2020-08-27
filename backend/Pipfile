@@ -9,7 +9,6 @@ verify_ssl = true
 django = "*"
 factory-boy = "*"
 graphene-django = "*"
-pylint = "*"
 pylint-django = "*"
 django-filter = "*"
 

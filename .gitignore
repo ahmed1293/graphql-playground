@@ -130,6 +130,7 @@ dmypy.json
 
 # ide
 .vscode/
+.idea/
 
 # static
 backend/playground/static/

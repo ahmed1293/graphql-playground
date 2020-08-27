@@ -1,9 +1,15 @@
 import graphene
-from football.schema import FootballQuery
+
+from football.api.mutations import ManagerMutation
+from football.api.query import FootballQuery
 
 
 class Query(FootballQuery, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(ManagerMutation, graphene.ObjectType):
+    pass
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
