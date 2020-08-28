@@ -2,11 +2,8 @@ from django.core.management.base import BaseCommand
 from football.factories import (
     CompetitionFactory,
     TeamFactory,
-    ManagerFactory,
     PlayerFactory,
-    StadiumFactory,
 )
-from football.models import Competition, Team, Manager, Player, Stadium
 
 
 class Command(BaseCommand):

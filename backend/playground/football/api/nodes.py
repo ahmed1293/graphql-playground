@@ -1,9 +1,11 @@
-from graphene import relay
+from graphene import relay, ID
 from graphene_django import DjangoObjectType
 from football.models import Manager, Stadium, Team, Competition, Player
 
 
 class ManagerNode(DjangoObjectType):
+    pk = ID(source="pk")
+
     class Meta:
         model = Manager
         fields = ("id", "first_name", "last_name", "age", "team")
@@ -16,6 +18,9 @@ class ManagerNode(DjangoObjectType):
 
 
 class StadiumNode(DjangoObjectType):
+
+    pk = ID(source="pk")
+
     class Meta:
         model = Stadium
         fields = ("id", "name", "city", "capacity")
@@ -28,6 +33,8 @@ class StadiumNode(DjangoObjectType):
 
 
 class TeamNode(DjangoObjectType):
+    pk = ID(source="pk")
+
     class Meta:
         model = Team
         fields = ("id", "name", "country", "manager", "stadium", "player_set")
@@ -40,6 +47,9 @@ class TeamNode(DjangoObjectType):
 
 
 class CompetitionNode(DjangoObjectType):
+
+    pk = ID(source="pk")
+
     class Meta:
         model = Competition
         fields = ("id", "name", "format", "teams")
@@ -51,6 +61,8 @@ class CompetitionNode(DjangoObjectType):
 
 
 class PlayerNode(DjangoObjectType):
+    pk = ID(source="pk")
+
     class Meta:
         model = Player
         fields = ("id", "first_name", "last_name", "number", "age", "team")

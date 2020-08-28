@@ -1,7 +1,13 @@
 from graphene import ObjectType, relay, Int
 from graphene_django.filter import DjangoFilterConnectionField
 
-from football.api.nodes import ManagerNode, StadiumNode, TeamNode, CompetitionNode, PlayerNode
+from football.api.nodes import (
+    ManagerNode,
+    StadiumNode,
+    TeamNode,
+    CompetitionNode,
+    PlayerNode,
+)
 from football.models import Manager, Stadium, Team, Competition, Player
 
 
