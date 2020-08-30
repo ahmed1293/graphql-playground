@@ -18,7 +18,6 @@ class ManagerNode(DjangoObjectType):
 
 
 class StadiumNode(DjangoObjectType):
-
     pk = ID(source="pk")
 
     class Meta:
@@ -47,7 +46,6 @@ class TeamNode(DjangoObjectType):
 
 
 class CompetitionNode(DjangoObjectType):
-
     pk = ID(source="pk")
 
     class Meta:
