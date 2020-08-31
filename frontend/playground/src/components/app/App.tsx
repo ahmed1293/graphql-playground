@@ -13,9 +13,9 @@ export default function App() {
   if (loading) {
     content = <Spinner/>
   } else if (error) {
-    content = <ErrorDiv>Error: {error.message}</ErrorDiv>
+    content = <ErrorDiv><b>Error:</b> {error.message}</ErrorDiv>
   } else {
-    content = data.toString();
+    content = data.managers.edges.map((m: any) => <div key={m.node.id}>{m.node.firstName} {m.node.lastName}</div>);
   }
 
   return <>
