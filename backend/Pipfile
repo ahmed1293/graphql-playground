@@ -11,6 +11,7 @@ factory-boy = "*"
 graphene-django = "*"
 pylint-django = "*"
 django-filter = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
